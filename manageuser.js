@@ -38,7 +38,7 @@ function checkexpiredtoken(token){
     usertoken = localStorage.getItem("token");
     $.ajax({
        type: 'GET',
-        url: '/validate/'+token,
+        url: 'https://dev.stedi.me/validate/'+token,
         data: JSON.stringify({usertoken}),
         success: function(data){savetoken(data)},
         contentType: "application/text",
@@ -51,7 +51,7 @@ function userlogin(){
     setusername();
     $.ajax({
         type: 'POST',
-        url: '/login',
+        url: 'https://dev.stedi.me/login',
         data: JSON.stringify({userName, password}),
         success: function(data) {
             window.location.href = "/timer.html#"+data;//add the token to the url
