@@ -136,6 +136,11 @@ function sendcode(){
             //change form to add one time code
         }
     })
+    document.getElementById("password").style.display = "inline"
+    document.getElementById("loginbtn").style.display = "inline"
+    document.getElementById("passwordlabel").style.display = "inline"
+
+
 }
 
 var passwordField = document.getElementById("password");
